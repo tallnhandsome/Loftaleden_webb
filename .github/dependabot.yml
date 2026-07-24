@@ -1,0 +1,11 @@
+# Dependabot: håller npm-beroendena uppdaterade med en samlad PR per månad.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      alla-beroenden:
+        patterns:
+          - '*'
