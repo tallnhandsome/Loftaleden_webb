@@ -26,5 +26,3 @@ pnpm-debug.log*
 # claude lokala inställningar
 .claude/settings.local.json
 
-# lokal anteckningsfil
-NÄSTA-STEG.md
