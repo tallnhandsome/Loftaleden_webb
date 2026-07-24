@@ -1,0 +1,10 @@
+// Konfiguration för Cloudflare Workers (statiska assets, ingen serverkod).
+// Deployas av Cloudflare Workers Builds med `npx wrangler deploy`.
+{
+	"name": "loftaleden",
+	"compatibility_date": "2026-07-24",
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "404-page"
+	}
+}

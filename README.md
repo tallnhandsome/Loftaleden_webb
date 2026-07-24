@@ -7,7 +7,7 @@ Statisk sajt för [loftaleden.se](https://loftaleden.se), byggd med [Astro](http
 ## Teknik
 
 - **[Astro](https://docs.astro.build)** – statisk sajtgenerator. Bloggposter är Markdown-filer i `src/content/blogg/`, allt annat är mallar i `src/`.
-- **Cloudflare Pages** – bygger och publicerar sajten automatiskt vid varje push till `main`. Build-kommando `npm run build`, output-katalog `dist`.
+- **Cloudflare Workers** (statiska assets) – bygger och publicerar sajten automatiskt vid varje push till `main`. Build-kommando `npm run build`, deploy `npx wrangler deploy` (konfiguration i `wrangler.jsonc`).
 - **Raleway** självhostas (`src/assets/fonts/`) – inga anrop till Google Fonts.
 - Kartan (Google My Maps) laddas först när besökaren klickar – sajtens enda JavaScript.
 
@@ -30,7 +30,7 @@ npm run preview    # förhandsgranska byggd sajt
 | `src/data/infopunkter.ts` | Informationspunkter längs leden |
 | `src/components/`, `src/layouts/` | Byggstenar och sidmallar |
 | `src/styles/global.css` | Färger (CSS-variabler) och grundstilar |
-| `public/_headers` | Säkerhetsheaders (CSP m.m.) för Cloudflare Pages |
+| `public/_headers` | Säkerhetsheaders (CSP m.m.) |
 | `public/_redirects` | 301-omdirigeringar från gamla Wix-adresser (`/post/…`) |
 | `public/dokument/` | Årsberättelser (PDF) |
 
