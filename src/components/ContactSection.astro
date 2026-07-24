@@ -1,0 +1,46 @@
+---
+import { ADRESS, EPOST, KONTAKTER } from '../data/kontakter';
+---
+
+<div class="kontakt">
+	<div>
+		<h3>Adress</h3>
+		<p>{ADRESS.map((rad) => <span>{rad}<br /></span>)}</p>
+		<h3>E-post</h3>
+		<p><a href={`mailto:${EPOST}`}>{EPOST}</a></p>
+	</div>
+	<div>
+		<h3>Telefon</h3>
+		<ul>
+			{
+				KONTAKTER.map((k) => (
+					<li>
+						{k.namn}
+						{k.roll && ` (${k.roll})`}:{' '}
+						<a href={`tel:${k.telefon.replace(/[^0-9+]/g, '')}`}>{k.telefon}</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</div>
+<style>
+	.kontakt {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2em;
+	}
+	.kontakt ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.kontakt li {
+		margin-bottom: 0.4em;
+	}
+	@media (max-width: 720px) {
+		.kontakt {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

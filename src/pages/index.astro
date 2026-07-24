@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import heroBild from '../assets/hero-ledoversikt.jpg';
+import logoEu from '../assets/logo-stod-2.jpeg';
+import logoLeader from '../assets/logo-stod-1.jpeg';
+import logoLluh from '../assets/logo-lluh.png';
+import ContactSection from '../components/ContactSection.astro';
+import PostCard from '../components/PostCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const poster = (await getCollection('blogg'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<section class="hero">
+		<Image
+			src={heroBild}
+			alt="Översikt över Löftaledens sträckning genom Löftaåns dalgång"
+			widths={[720, 1440, 2000]}
+			sizes="(max-width: 960px) 100vw, 960px"
+			loading="eager"
+		/>
+		<div class="hero-text">
+			<h1>Upplev Löftaleden</h1>
+			<p>Hållbar, säker mobilitet och ökad tillgänglighet till Frillesås vackra omgivningar.</p>
+			<div class="knappar">
+				<a class="knapp" href="/karta">Se kartan</a>
+				<a class="knapp sekundar" href="/bli-medlem">Bli medlem idag</a>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h2>Senaste från nyhetsflödet</h2>
+		<div class="nyhetsgrid">
+			{poster.map((post) => <PostCard post={post} />)}
+		</div>
+		<p><a href="/nyhetsflode">Alla inlägg →</a></p>
+	</section>
+
+	<section class="om-oss">
+		<h2>Om oss</h2>
+		<p>
+			Löftaleden Ideell förening bildades våren 2021 som ett initiativ för att
+			tillgängliggöra områdena kring Frillesås. Vi arbetar för att öka möjligheterna
+			till en aktiv livsstil och att färdas på ett hållbart och tryggt sätt för så väl
+			ung som gammal. Vi vill också öka tillgängligheten till den unika natur och
+			spännande kulturhistoria som präglar trakten.
+		</p>
+		<p>
+			Ett av våra fokusområden handlar om att anlägga en sammanhängande lågtrafikerad
+			gång- och cykelled genom Löftaåns dalgång som också binder ihop dalen med både
+			Kattegattleden och Hallandsleden så väl som omgivande utflyktsmål i närområdet.
+		</p>
+		<p>Genom lokala aktiviteter, projekt och samverkan skapar vi en härlig livsplats tillsammans.</p>
+		<p><strong>Välkommen att engagera dig i föreningen!</strong> <a href="/om">Läs mer om oss →</a></p>
+	</section>
+
+	<section>
+		<h2>Kontakt</h2>
+		<ContactSection />
+	</section>
+
+	<section class="stod">
+		<h2>Med stöd från</h2>
+		<div class="logotyper">
+			<Image src={logoLluh} alt="Lokalt Ledd Utveckling Halland" height={90} />
+			<Image src={logoLeader} alt="Leader" height={90} />
+			<Image
+				src={logoEu}
+				alt="Europeiska jordbruksfonden för landsbygdsutveckling. Europa investerar i landsbygdsområden"
+				height={90}
+			/>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	section {
+		margin-bottom: 3em;
+	}
+	.hero {
+		position: relative;
+	}
+	.hero img {
+		width: 100%;
+		height: auto;
+		border-radius: 12px 12px 0 0;
+		display: block;
+	}
+	.hero-text {
+		background: var(--tint);
+		border-radius: 0 0 12px 12px;
+		padding: 1.5em;
+		text-align: center;
+	}
+	.hero-text h1 {
+		margin-bottom: 0.2em;
+	}
+	.hero-text p {
+		max-width: 40em;
+		margin: 0 auto 1em;
+	}
+	.knappar {
+		display: flex;
+		gap: 1em;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.nyhetsgrid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2em;
+		margin-bottom: 1em;
+	}
+	.om-oss {
+		background: var(--tint);
+		padding: 1.5em 2em;
+		border-radius: 12px;
+	}
+	.logotyper {
+		display: flex;
+		gap: 2.5em;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.logotyper img {
+		width: auto;
+		height: 90px;
+		object-fit: contain;
+	}
+	@media (max-width: 720px) {
+		.nyhetsgrid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

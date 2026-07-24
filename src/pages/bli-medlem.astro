@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import bild from '../assets/bli-medlem-2.jpg';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const FORMULAR = 'https://forms.gle/iYw58uzAb7Dg2U2a6';
+---
+
+<BaseLayout
+	title="Bli medlem"
+	description="Bli medlem i Löftaleden Ideell Förening – 200 kr per person eller 300 kr per familj och år."
+>
+	<h1>Häng med!</h1>
+	<p>
+		Löftaleden Ideell Förening bygger på ideellt arbete och fin gemenskap. Vi är ett
+		härligt gäng med ett stort intresse för natur, kultur och en passion för en hållbar
+		och levande landsbygd. Ditt stöd är avgörande för att vi skall kunna driva
+		föreningen och arrangera event. Här nedan hittar du olika sätt att stötta vår
+		förening.
+	</p>
+
+	<Image src={bild} alt="Medlemmar i Löftaleden Ideell Förening" widths={[720, 1440]} sizes="(max-width: 960px) 100vw, 960px" />
+
+	<section>
+		<h2>Bli medlem</h2>
+		<p>
+			Ju fler desto bättre! Välkommen att bidra till föreningens utveckling som
+			stödmedlem. Årsavgiften är <strong>200 kr per person</strong> eller
+			<strong>300 kr per familj</strong>.
+		</p>
+		<ol>
+			<li>Fyll i medlemsformuläret via knappen nedan.</li>
+			<li>
+				Swisha till <strong>0760-244 360</strong> (kassör Lina Borghardt) och ange
+				<em>”löftaleden medlemskap”</em> – alternativt sätt in på bankgiro
+				<strong>5857-4682</strong>. Du får en bekräftelse via sms.
+			</li>
+		</ol>
+		<p><a class="knapp" href={FORMULAR}>Medlemsformulär</a></p>
+		<p>God karma och inbjudan till årsmöte och medlemsaktiviteter ingår!</p>
+	</section>
+
+	<section>
+		<h2>Ge en donation</h2>
+		<p>
+			Det här är ett av de enklaste sätten att stödja vårt arbete. Brinner du också
+			för att utveckla vår landsbygd och att fler människor skall få möjlighet att
+			upptäcka Löftaåns dalgång med dess fantastiska natur och kultur? Föreningens
+			utveckling är beroende av ideellt arbete, projektmedel och frivilliga
+			donationer. Ditt bidrag gör skillnad.
+		</p>
+		<p>
+			Swisha till <strong>079-355 05 80</strong> (ordf. Birger Löfgren) och ange
+			<em>”Löftaleden donation”</em> – alternativt sätt in på bankgiro
+			<strong>5857-4682</strong> – så får du en bekräftelse över sms.
+		</p>
+	</section>
+
+	<section>
+		<h2>Engagera dig i föreningen</h2>
+		<p>
+			Hör av dig till oss om du vill engagera dig lite extra i föreningen. Vi är ett
+			glatt gäng från bygden som startat föreningen och det finns stort behov framåt
+			av personer med ett intresse för allt från markanläggning och projektarbete till
+			marknadsföring och event. <a href="/kontakt">Hör av dig!</a>
+		</p>
+	</section>
+</BaseLayout>
+
+<style>
+	section {
+		margin-top: 2.5em;
+	}
+</style>

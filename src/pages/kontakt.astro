@@ -1,0 +1,22 @@
+---
+import ContactSection from '../components/ContactSection.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { FACEBOOK } from '../data/kontakter';
+---
+
+<BaseLayout
+	title="Kontakt"
+	description="Kontakta Löftaleden Ideell Förening – adress, e-post och telefonnummer."
+>
+	<h1>Kontakta föreningen</h1>
+	<p>Kontakta oss för att få reda på mer om vårt arbete och hur du kan engagera dig.</p>
+	<ContactSection />
+	<h2>Sociala medier</h2>
+	<p><a href={FACEBOOK}>Följ oss i vår Facebook-grupp</a></p>
+</BaseLayout>
+
+<style>
+	h2 {
+		margin-top: 1.5em;
+	}
+</style>

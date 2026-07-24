@@ -1,0 +1,47 @@
+---
+import { ADRESS, EPOST, FACEBOOK } from '../data/kontakter';
+const idag = new Date();
+---
+
+<footer>
+	<div class="innehall">
+		<div>
+			<strong>Löftaleden Ideell Förening</strong><br />
+			{ADRESS.join(', ')}<br />
+			<a href={`mailto:${EPOST}`}>{EPOST}</a>
+		</div>
+		<div class="lankar">
+			<a href={FACEBOOK}>Facebook-grupp</a>
+			<a href="/rss.xml">RSS-flöde</a>
+			<a href="/bli-medlem">Bli medlem</a>
+		</div>
+	</div>
+	<p class="copyright">© {idag.getFullYear()} Löftaleden Ideell Förening</p>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em;
+		background: var(--tint);
+		color: rgb(var(--gray-dark));
+		font-size: 0.95em;
+	}
+	.innehall {
+		max-width: 960px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		gap: 2em;
+		flex-wrap: wrap;
+	}
+	.lankar {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
+	}
+	.copyright {
+		max-width: 960px;
+		margin: 1.5em auto 0;
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+</style>

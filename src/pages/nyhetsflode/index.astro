@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const poster = (await getCollection('blogg')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout
+	title="Nyhetsflöde"
+	description="Nyheter och berättelser från Löftaleden Ideell Förening."
+>
+	<h1>Nyhetsflöde</h1>
+	<div class="grid">
+		{poster.map((post) => <PostCard post={post} />)}
+	</div>
+</BaseLayout>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5em 2em;
+		margin-top: 1.5em;
+	}
+	@media (max-width: 720px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

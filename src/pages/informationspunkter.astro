@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { INFOPUNKTER } from '../data/infopunkter';
+---
+
+<BaseLayout
+	title="Informationspunkter"
+	description="Informationspunkter längs Löftaleden – historiska platser i Löftaåns dalgång."
+>
+	<h1>Informationspunkter längs sträckan</h1>
+	<p>
+		Längs leden finns skyltar som berättar om platsernas historia. Här är ett urval –
+		fler tillkommer efter hand.
+	</p>
+	<div class="grid">
+		{
+			INFOPUNKTER.map((punkt) => (
+				<article>
+					<Image src={punkt.bild} alt={punkt.titel} widths={[480, 960]} sizes="(max-width: 720px) 100vw, 480px" />
+					<h2>{punkt.titel}</h2>
+					<p>{punkt.text}</p>
+				</article>
+			))
+		}
+	</div>
+</BaseLayout>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5em 2em;
+		margin-top: 1.5em;
+	}
+	article img {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin-bottom: 0.6em;
+	}
+	article h2 {
+		font-size: 1.3em;
+	}
+	@media (max-width: 720px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

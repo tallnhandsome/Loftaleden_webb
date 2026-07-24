@@ -1,0 +1,110 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+
+const LANKAR = [
+	{ href: '/', text: 'Hem' },
+	{ href: '/nyhetsflode', text: 'Nyhetsflöde' },
+	{ href: '/karta', text: 'Karta' },
+	{ href: '/informationspunkter', text: 'Informationspunkter' },
+	{ href: '/bli-medlem', text: 'Bli medlem' },
+	{ href: '/om', text: 'Om' },
+	{ href: '/kontakt', text: 'Kontakt' },
+];
+---
+
+<header>
+	<nav>
+		<a class="sajtnamn" href="/">{SITE_TITLE}</a>
+		<input type="checkbox" id="meny-toggle" aria-hidden="true" />
+		<label for="meny-toggle" class="hamburgare" aria-hidden="true">
+			<span></span><span></span><span></span>
+		</label>
+		<div class="lankar">
+			{LANKAR.map((l) => <HeaderLink href={l.href}>{l.text}</HeaderLink>)}
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: #fff;
+		box-shadow: 0 2px 8px rgba(var(--black), 8%);
+		position: relative;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	.sajtnamn {
+		font-size: 1.25em;
+		font-weight: 700;
+		color: var(--accent-dark);
+		text-decoration: none;
+		padding: 0.6em 0;
+		letter-spacing: 0.04em;
+	}
+	.lankar {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2em;
+	}
+	nav :global(.lankar a) {
+		padding: 1em 0.55em;
+		color: rgb(var(--black));
+		border-bottom: 3px solid transparent;
+		text-decoration: none;
+		font-size: 0.95em;
+	}
+	nav :global(.lankar a.active) {
+		font-weight: 600;
+		border-bottom-color: var(--accent);
+	}
+
+	/* Mobilmeny utan JavaScript: en dold checkbox styr synligheten. */
+	#meny-toggle {
+		display: none;
+	}
+	.hamburgare {
+		display: none;
+		flex-direction: column;
+		gap: 5px;
+		padding: 0.8em 0.4em;
+		cursor: pointer;
+	}
+	.hamburgare span {
+		display: block;
+		width: 24px;
+		height: 3px;
+		background: var(--accent-dark);
+		border-radius: 2px;
+	}
+	@media (max-width: 900px) {
+		.hamburgare {
+			display: flex;
+		}
+		.lankar {
+			display: none;
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 0.5em;
+		}
+		#meny-toggle:checked ~ .lankar {
+			display: flex;
+		}
+		nav :global(.lankar a) {
+			padding: 0.55em 0.2em;
+			border-bottom: none;
+			border-left: 3px solid transparent;
+			padding-left: 0.5em;
+		}
+		nav :global(.lankar a.active) {
+			border-left-color: var(--accent);
+		}
+	}
+</style>

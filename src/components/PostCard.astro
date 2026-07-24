@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	post: CollectionEntry<'blogg'>;
+}
+
+const { post } = Astro.props;
+---
+
+<a class="kort" href={`/nyhetsflode/${post.id}/`}>
+	{
+		post.data.heroImage && (
+			<Image
+				width={720}
+				height={405}
+				src={post.data.heroImage}
+				alt={post.data.heroImageAlt ?? ''}
+			/>
+		)
+	}
+	<h3>{post.data.title}</h3>
+	<p class="datum"><FormattedDate date={post.data.pubDate} /></p>
+	<p class="beskrivning">{post.data.description}</p>
+</a>
+<style>
+	.kort {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
+	.kort img {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin-bottom: 0.6em;
+		object-fit: cover;
+	}
+	.kort h3 {
+		margin: 0 0 0.2em;
+		font-size: 1.15em;
+		line-height: 1.3;
+	}
+	.kort:hover h3 {
+		color: var(--accent);
+	}
+	.kort:hover img {
+		box-shadow: var(--box-shadow);
+	}
+	.datum {
+		margin: 0 0 0.4em;
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+	.beskrivning {
+		margin: 0;
+		font-size: 0.95em;
+	}
+</style>

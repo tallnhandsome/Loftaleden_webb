@@ -1,0 +1,34 @@
+---
+import MapEmbed from '../components/MapEmbed.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const MID = '15mDTt3IuzaLr8rc26dpEHk7Lfg0DaHc';
+const EARTH = 'https://earth.google.com/earth/d/10-iCjjEwqXOZnzYmiW546OdXCIZ-nvjU';
+---
+
+<BaseLayout title="Karta" description="Karta över Löftaleden – gång- och cykelleden genom Löftaåns dalgång.">
+	<h1>Karta</h1>
+	<p>
+		Här hittar du Löftaledens sträckning. Vill du kunna navigera i mobilen, med
+		GPX-filer och offlinekartor? Läs&#32;<a
+			href="/nyhetsflode/loftaleden-i-mobilen-nu-med-navigering-och-gpx-filer/"
+			>det här inlägget</a
+		>.
+	</p>
+
+	<MapEmbed />
+
+	<h2>Öppna kartan i andra tjänster</h2>
+	<ul>
+		<li>
+			<a href={`https://www.google.com/maps/d/viewer?mid=${MID}`}>Google Maps</a>
+		</li>
+		<li><a href={EARTH}>Google Earth</a></li>
+	</ul>
+</BaseLayout>
+
+<style>
+	h2 {
+		margin-top: 1.5em;
+	}
+</style>

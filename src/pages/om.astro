@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import familjecykling from '../assets/familjecykling.jpg';
+import kartskiss from '../assets/om-kartskiss.jpg';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Om oss"
+	description="Om Löftaleden Ideell Förening – varför vi bygger en gång- och cykelled genom Löftaåns dalgång."
+>
+	<h1>Om oss</h1>
+	<p>
+		Alla som kört längs Frillesåsvägen ut med Löftaån vet hur osäker den smala och
+		kurviga vägen är för såväl gångtrafikanter som cyklister. Samtidigt finns det ett
+		ökande intresse för natur och kultur och fler människor vill ta del av sin
+		närmiljö på ett hållbart sätt. Med denna bakgrund har det väckts tankar kring att
+		skapa en gång- och cykelled från Förlanda via Idala och Stuv ända in till
+		Frillesås centrum. Genom att anlägga ca 3 km ny grusväg ges möjligheten att knyta
+		ihop en sträcka på 22 kilometer och man slipper också att ta värdefull åkermark i
+		anspråk längs Frillesåsvägen.
+	</p>
+	<Image src={kartskiss} alt="Kartskiss över ledens planerade sträckning" widths={[720, 1440]} sizes="(max-width: 960px) 100vw, 960px" />
+	<p>
+		Förutom att bygdens skolbarn och cykelpendlare får möjlighet till en säker väg så
+		ökar även tillgängligheten för traktens invånare till Kattegattleden. Att
+		Löftaåns dalgång är en kulturellt och historiskt intressant plats är såklart en
+		stor bonus. Är man intresserad av att engagera sig finns det möjlighet att
+		<a href="/bli-medlem">bli medlem i föreningen</a> och bidra i någon av de
+		arbetsgrupper som behövs för att få allt på plats.
+	</p>
+	<p><strong>Tillsammans skapar vi en hållbar framtid!</strong></p>
+	<Image src={familjecykling} alt="Familj cyklar i skogen" widths={[720, 1440]} sizes="(max-width: 960px) 100vw, 960px" />
+
+	<h2>Årsberättelser</h2>
+	<ul>
+		<li><a href="/dokument/arsberattelse-2022.pdf">Årsberättelse 2022 (PDF)</a></li>
+		<li><a href="/dokument/arsberattelse-2021.pdf">Årsberättelse 2021 (PDF)</a></li>
+	</ul>
+</BaseLayout>
+
+<style>
+	h2 {
+		margin-top: 1.5em;
+	}
+</style>
