@@ -27,17 +27,19 @@ npm run preview    # förhandsgranska byggd sajt
 | `src/content/blogg/<slug>/index.md` | Bloggposter, en mapp per inlägg med bilder bredvid |
 | `src/pages/` | Sajtens sidor (Hem, Nyhetsflöde, Karta, …) |
 | `src/data/kontakter.ts` | Kontaktuppgifter (används på Hem + Kontakt) |
-| `src/data/infopunkter.ts` | Informationspunkter längs leden |
+| `src/content/infopunkter/<slug>/index.md` | Informationsskyltarna längs leden, en mapp per skylt med bilder bredvid |
 | `src/components/`, `src/layouts/` | Byggstenar och sidmallar |
 | `src/styles/global.css` | Färger (CSS-variabler) och grundstilar |
 | `public/_headers` | Säkerhetsheaders (CSP m.m.) |
-| `public/_redirects` | 301-omdirigeringar från gamla Wix-adresser (`/post/…`) |
+| `public/_redirects` | 301-omdirigeringar från gamla Wix-adresser (`/post/…`, `/info-skyltar/…` m.fl.) |
 | `public/dokument/` | Årsberättelser (PDF) |
 
 ## Vanliga ändringar
 
 - **Nytt telefonnummer/adress:** redigera `src/data/kontakter.ts`.
-- **Ny informationspunkt:** lägg bilden i `src/assets/infopunkter/` och lägg till en post i `src/data/infopunkter.ts`.
+- **Ny informationspunkt:** kopiera en befintlig mapp i `src/content/infopunkter/`, byt ut
+  bilden och texten. `ordning` i frontmatter styr platsen i listan. Varje skylt har
+  svensk text i brödtexten och den engelska översättningen i en `<div lang="en">`.
 - **Ny bloggpost:** se [PUBLICERA.md](PUBLICERA.md).
 
 ## Säkerhet och drift

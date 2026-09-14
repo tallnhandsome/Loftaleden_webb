@@ -69,4 +69,4 @@ Varför inte också utmana er på frågorna från quiz:en på invigningen av str
 
 ### Påminnelse ☀️
 
-Glöm inte att förnya er **medlemsavgift för 2024** - om ni inte redan gjort det. Det gör du enklelt via swish eller bankgiro. Se [https://www.loftaleden.se/bli-medlem](https://www.loftaleden.se/bli-medlem)
+Glöm inte att förnya er **medlemsavgift för 2024** - om ni inte redan gjort det. Det gör du enkelt via swish eller bankgiro. Se [www.loftaleden.se/bli-medlem](/bli-medlem)

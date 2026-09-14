@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const punkter = await getCollection('infopunkter');
+	return punkter.map((punkt) => ({
+		params: { slug: punkt.id },
+		props: punkt,
+	}));
+}
+type Props = CollectionEntry<'infopunkter'>;
+
+const punkt = Astro.props;
+const { Content } = await render(punkt);
+const { titel, ingress, bild, bildAlt, bild2, bild2Alt, kalla } = punkt.data;
+---
+
+<BaseLayout title={titel} description={ingress} image={bild}>
+	<article>
+		<p class="tillbaka"><a href="/informationspunkter/">← Alla informationspunkter</a></p>
+		<h1>{titel}</h1>
+		<p class="ingress">{ingress}</p>
+		<Image
+			src={bild}
+			alt={bildAlt}
+			widths={[720, 1020]}
+			sizes="(max-width: 960px) 100vw, 960px"
+			loading="eager"
+		/>
+		<div class="prose">
+			<Content />
+		</div>
+		{
+			bild2 && bild2Alt && (
+				<Image src={bild2} alt={bild2Alt} widths={[720, 1020]} sizes="(max-width: 960px) 100vw, 960px" />
+			)
+		}
+		{kalla && <p class="kalla">{kalla}</p>}
+	</article>
+</BaseLayout>
+
+<style>
+	.tillbaka {
+		margin: 0 0 1em;
+		font-size: 0.95em;
+	}
+	.ingress {
+		font-weight: 600;
+		font-size: 1.1em;
+		max-width: 44em;
+	}
+	article :global(img) {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin: 1.5em 0;
+	}
+	.prose {
+		max-width: 44em;
+	}
+	/* Den engelska översättningen ligger i en <div lang="en"> i varje index.md */
+	.prose :global([lang='en']) {
+		margin-top: 2.5em;
+		padding-top: 1.5em;
+		border-top: 1px solid var(--tint-2);
+	}
+	.prose :global([lang='en'] h2) {
+		font-size: 1.4em;
+	}
+	.kalla {
+		margin-top: 2.5em;
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+	}
+</style>

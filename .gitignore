@@ -26,3 +26,6 @@ pnpm-debug.log*
 # claude lokala inställningar
 .claude/settings.local.json
 
+
+# lokalt genererat designunderlag
+Loftaleden-designforslag.pdf

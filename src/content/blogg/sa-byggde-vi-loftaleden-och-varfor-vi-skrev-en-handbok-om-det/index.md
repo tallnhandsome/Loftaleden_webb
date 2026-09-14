@@ -7,7 +7,7 @@ heroImage: ./hero.jpg
 
 När vi började drömma om en sammanhängande gång- och cykelväg genom Löftaåns dalgång hade vi egentligen ingen aning om hur mycket arbete, samtal och samverkan som väntade. Vi såg bara en möjlighet: att knyta ihop byar, natur, kulturmiljöer och människor. Det var så Löftaleden föddes – och det är därför vi nu har skrivit en handbok för andra som vill göra något liknande.
 
-Handboken[*Bygga cykelväg på landet – erfarenheter av samskapande från Löftaleden*](https://33039529-4c11-4d08-8efa-47a447c334b1.usrfiles.com/ugd/330395_6b031398f564483286cd0f11adddd661.pdf)är vår berättelse om hur en idé växte till ett helt projekt. Den bygger på allt vi lärt oss: det roliga, det svåra, det oförutsedda och det fantastiska.
+Handboken [*Bygga cykelväg på landet – erfarenheter av samskapande från Löftaleden*](/dokument/bygga-cykelvag-pa-landet.pdf) är vår berättelse om hur en idé växte till ett helt projekt. Den bygger på allt vi lärt oss: det roliga, det svåra, det oförutsedda och det fantastiska.
 
 ## En väg som band samman mer än platser
 

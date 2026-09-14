@@ -7,7 +7,7 @@ heroImage: ./hero.jpg
 
 Idag var Peter från SVT Halland i Idala för att göra ett reportage om Löftaleden!
 
-Vi stod i regnet och brev intervjuade. Reporter-Peter fick åka med en sväng i lådcykeln på nya sträckan 😀. Tack för besöket 🙏
+Vi stod i regnet och blev intervjuade. Reporter-Peter fick åka med en sväng i lådcykeln på nya sträckan 😀. Tack för besöket 🙏
 
 ![](./bild-2.jpg)
 

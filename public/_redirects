@@ -16,3 +16,32 @@
 /post/*  /nyhetsflode/  301
 /blog  /nyhetsflode/  301
 /blog/*  /nyhetsflode/  301
+
+# Informationsskyltarna: Wix hade dem under /info-skyltar/ och /informationspunkter-1/
+/info-skyltar/tjuadal-naturreservat  /informationspunkter/tjuadal-naturreservat/  301
+/info-skyltar/en-skog-v%C3%A4rd-att-skydda  /informationspunkter/en-skog-vard-att-skydda/  301
+/info-skyltar/f%C3%A4bun-%E2%80%93-ett-minne-fr%C3%A5n-f%C3%B6rr  /informationspunkter/fabun-ett-minne-fran-forr/  301
+/info-skyltar/glamsten-%E2%80%93-en-j%C3%A4tte-fr%C3%A5n-istiden  /informationspunkter/glamsten-en-jatte-fran-istiden/  301
+/info-skyltar/h%C3%A5fors-%E2%80%93-en-by-i-tv%C3%A5-socknar  /informationspunkter/hafors-en-by-i-tva-socknar/  301
+/info-skyltar/j%C3%A4rnv%C3%A4gen-som-aldrig-blev-av  /informationspunkter/jarnvagen-som-aldrig-blev-av/  301
+/info-skyltar/lia-by-1799%E2%80%931869  /informationspunkter/lia-by-1799-1869/  301
+/info-skyltar/l%C3%B6fta%C3%A5n-%E2%80%93-ett-levande-vatten  /informationspunkter/loftaan-ett-levande-vatten/  301
+/info-skyltar/l%C3%B6ftadalen-i-v%C3%A5ra-hj%C3%A4rtan  /informationspunkter/loftadalen-i-vara-hjartan/  301
+/info-skyltar/snogge-hembygdsg%C3%A5rd  /informationspunkter/snogge-hembygdsgard/  301
+/info-skyltar/stuvs-by  /informationspunkter/stuvs-by/  301
+/info-skyltar/%C3%A4lek%C3%A4rr-s%C3%A4teri  /informationspunkter/alekarr-sateri/  301
+/informationspunkter-1/h%C3%A5fors-%E2%80%93-en-by-i-tv%C3%A5-socknar  /informationspunkter/hafors-en-by-i-tva-socknar/  301
+/informationspunkter-1/lia-by-1799-1869  /informationspunkter/lia-by-1799-1869/  301
+/info-skyltar  /informationspunkter/  301
+/info-skyltar/*  /informationspunkter/  301
+/informationspunkter-1  /informationspunkter/  301
+/informationspunkter-1/*  /informationspunkter/  301
+
+# Övriga gamla Wix-sidor som inte har någon motsvarighet på nya sajten
+/interaktiv-karta  /karta/  301
+/formul%C3%A4r-medlemsskap  /bli-medlem/  301
+/aktuellt  /nyhetsflode/  301
+/hem  /  301
+/search  /  301
+/items  /  301
+/items/*  /  301

@@ -41,4 +41,4 @@ Löftaleden har monter, visar vår sträckning och berättar vad vi gör – kom
 
 - **Välkommen till våra aktiviteter!**
 - **All anmälan sker till**: [loftaleden@gmail.com](mailto:loftaleden@gmail.com)
-- Håll ögonen öppna på [www.loftaleden.se](http://www.loftaleden.se) och i våra sociala medier för de aktiviteter som ännu saknar exakt datum.
+- Håll ögonen öppna på [www.loftaleden.se](/) och i våra sociala medier för de aktiviteter som ännu saknar exakt datum.
