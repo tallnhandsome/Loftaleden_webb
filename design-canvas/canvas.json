@@ -1,0 +1,24 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Startsidor" },
+    { "id": "page-2", "name": "Mobil och sidmall" },
+    { "id": "page-3", "name": "Grafisk grund" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html",      "page": "page-1", "x": 0,    "y": 0, "w": 1440, "h": 3160, "title": "A — Dalgången" },
+    { "file": "RiktningB.dc.html", "page": "page-1", "x": 1600, "y": 0, "w": 1440, "h": 2760, "title": "B — Vägvisaren" },
+    { "file": "RiktningC.dc.html", "page": "page-1", "x": 3200, "y": 0, "w": 1440, "h": 2840, "title": "C — Byalaget" },
+    { "file": "Mobil.dc.html",     "page": "page-2", "x": 0,    "y": 0, "w": 390,  "h": 4180, "title": "A — mobil" },
+    { "file": "Infopunkt.dc.html", "page": "page-2", "x": 550,  "y": 0, "w": 1440, "h": 2120, "title": "Informationspunkt (riktning A)" },
+    { "file": "Grafik.dc.html",    "page": "page-3", "x": 0,    "y": 0, "w": 1440, "h": 2680, "title": "Grafisk grund" }
+  ],
+  "annotations": [
+    { "id": "riktning-a", "page": "page-1", "x": 0, "y": -300, "w": 760, "text": "A — Dalgången (ledande förslag)\nFotot först: helbredds-hero med redaktionell serif mot Raleway. Faktaremsan lyfter 22 km, 12 informationspunkter och anslutningarna. Störst känsla för besökare och press — men den lever på att ni har bra foton." },
+    { "id": "riktning-b", "page": "page-1", "x": 1600, "y": -300, "w": 760, "text": "B — Vägvisaren\nLeden som verktyg. Schemat är ritat i kartans stil: tjock svart väg, grön streckad led, era egna ikoner. Avstånden står i avståndsskyltarnas form. Nyheterna som lista. Snabbast i mobilen ute på leden och minst beroende av bra foton." },
+    { "id": "riktning-c", "page": "page-1", "x": 3200, "y": -300, "w": 760, "text": "C — Byalaget\nFöreningen först: varm pappersbotten, slab-rubriker och ockra vid sidan av det gröna. Medlemsrutan högt upp med avgifter och swish, med vimplarna från kartan — enda riktningen som ändrar innehållsordningen. Bäst för medlemsvärvning." },
+    { "id": "not-mobil", "page": "page-2", "x": 0, "y": -240, "w": 390, "text": "Mobil av riktning A.\nSamma innehåll i en kolumn, tryckytor minst 48 px." },
+    { "id": "not-infopunkt", "page": "page-2", "x": 550, "y": -240, "w": 760, "text": "Informationspunkt\nFöljer skyltarnas uppdelning: svensk text i huvudspalten, engelskan i salviagrön sidospalt, källhänvisning under. Föregående och nästa är avståndsskyltar." },
+    { "id": "not-grafik", "page": "page-3", "x": 0, "y": -280, "w": 760, "text": "Grafisk grund\nLogotyp, ikoner, kartans vägstil och avståndsskyltarna — allt hämtat ur föreningens egna vektorfiler, inget avritat. Paletten utgår från logotypens mossgröna #59663b." }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

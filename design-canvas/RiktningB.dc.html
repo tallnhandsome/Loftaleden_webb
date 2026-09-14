@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Raleway:wght@400;600;700;800&display=swap">
+  <style>
+    body { margin: 0; background: #ffffff; font-family: Raleway, "Helvetica Neue", sans-serif; }
+    a { color: #5a6b34; text-decoration: none; }
+    a:hover { color: #333b22; }
+    p { text-wrap: pretty; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #ffffff; color: #23281c; font-size: 17px; line-height: 1.6;">
+
+  <!-- HEADER -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 74px; border-bottom: 3px solid #333b22;">
+    <a href="#" style="display: block; line-height: 0;"><img src="logo-liggande-gron.svg" alt="Löftaleden" style="height: 30px; width: auto; display: block; border-radius: 0;"></a>
+    <div style="display: flex; align-items: center; gap: 28px;">
+      <a href="#" style="font-size: 15px; font-weight: 600; color: #23281c;">Nyhetsflöde</a>
+      <a href="#" style="font-size: 15px; font-weight: 600; color: #23281c; border-bottom: 3px solid #d2601a; padding-bottom: 3px;">Karta</a>
+      <a href="#" style="font-size: 15px; font-weight: 600; color: #23281c;">Informationspunkter</a>
+      <a href="#" style="font-size: 15px; font-weight: 600; color: #23281c;">Om</a>
+      <a href="#" style="font-size: 15px; font-weight: 600; color: #23281c;">Kontakt</a>
+      <a href="#" style="background: #333b22; color: #ffffff; font-size: 15px; font-weight: 700; padding: 11px 22px; border-radius: 3px;">Bli medlem</a>
+    </div>
+  </div>
+
+  <!-- HERO: delad, med ledschema -->
+  <div style="display: grid; grid-template-columns: 1.12fr 1fr;">
+    <div style="background: #eff2e7; padding: 62px 56px 52px; display: flex; flex-direction: column; gap: 24px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; color: #d2601a;">GÅNG- OCH CYKELLED · LÖFTAÅNS DALGÅNG</span>
+      <h1 style="font-weight: 800; font-size: 58px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; color: #333b22;">Upplev Löftaleden</h1>
+      <p style="margin: 0; max-width: 44ch; font-size: 19px; color: #414937;">Hållbar, säker mobilitet och ökad tillgänglighet till Frillesås vackra omgivningar.</p>
+      <div style="display: flex; gap: 12px; margin-top: 4px;">
+        <a href="#" style="display: flex; align-items: center; gap: 9px; background: #59663b; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 3px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6.5v13.5L9 17.5l6 2.5 6-2.5V4l-6 2.5z"></path><path d="M9 4v13.5M15 6.5V20"></path></svg>
+          Se kartan
+        </a>
+        <a href="#" style="border: 2px solid #59663b; color: #333b22; font-weight: 700; font-size: 16px; padding: 12px 26px; border-radius: 3px;">Bli medlem idag</a>
+      </div>
+
+      <!-- Ledschema -->
+      <div style="margin-top: 26px; padding-top: 26px; border-top: 1px solid #cfd8bf; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #6b7358;">STRÄCKNING · 22 KM</span>
+        <div style="position: relative;">
+          <svg width="612" height="108" viewBox="0 0 612 108" fill="none" style="max-width: 100%; display: block;">
+            <path d="M8 74 C 96 66 138 30 214 28 C 292 26 330 62 404 56 C 486 49 534 20 604 16"
+                  stroke="#1a1a1a" stroke-width="12" stroke-linecap="round" fill="none"></path>
+            <path d="M14 88 C 104 82 148 46 220 44 C 298 42 336 78 408 72 C 490 65 538 36 606 32"
+                  stroke="#59663b" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="13 10" fill="none"></path>
+            <circle cx="8" cy="74" r="7" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"></circle>
+            <circle cx="604" cy="16" r="7" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"></circle>
+            <text x="4" y="104" font-family="Raleway, sans-serif" font-size="15" font-weight="700" fill="#333b22" text-anchor="start">Förlanda</text>
+            <text x="216" y="104" font-family="Raleway, sans-serif" font-size="15" font-weight="700" fill="#333b22" text-anchor="middle">Idala</text>
+            <text x="410" y="104" font-family="Raleway, sans-serif" font-size="15" font-weight="700" fill="#333b22" text-anchor="middle">Stuv</text>
+            <text x="608" y="104" font-family="Raleway, sans-serif" font-size="15" font-weight="700" fill="#333b22" text-anchor="end">Frillesås</text>
+          </svg>
+          <img src="ikon-cykel.svg" alt="" style="position: absolute; left: 96px; top: 12px; height: 21px; width: auto; border-radius: 0;">
+          <img src="ikon-granar.svg" alt="" style="position: absolute; left: 300px; top: 4px; height: 26px; width: auto; border-radius: 0;">
+          <img src="ikon-grill.svg" alt="" style="position: absolute; left: 468px; top: 0px; height: 22px; width: auto; border-radius: 0;">
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0; margin-top: 4px;">
+          <svg width="556" height="46" viewBox="0 0 556 46" fill="none" style="max-width: 100%;">
+            <g>
+              <path d="M2 4 H 186 L 208 23 L 186 42 H 2 Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"></path>
+              <text x="18" y="30" font-family="Raleway, sans-serif" font-size="17" font-weight="800" fill="#1a1a1a">FRILLESÅS 3,1</text>
+            </g>
+            <g transform="translate(222,0)">
+              <path d="M148 4 H 22 L 2 23 L 22 42 H 148 Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"></path>
+              <text x="36" y="30" font-family="Raleway, sans-serif" font-size="17" font-weight="800" fill="#1a1a1a">IDALA 3,2</text>
+            </g>
+            <g transform="translate(394,0)">
+              <path d="M2 4 H 138 L 158 23 L 138 42 H 2 Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"></path>
+              <text x="18" y="30" font-family="Raleway, sans-serif" font-size="17" font-weight="800" fill="#1a1a1a">STUV 2,3</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <img src="flygfoto.jpg" alt="Flygfoto över skogen i Löftaåns dalgång" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+  </div>
+
+  <!-- NYHETSFLÖDE som lista -->
+  <div style="padding: 76px 56px 68px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+      <h2 style="font-weight: 800; font-size: 34px; letter-spacing: -0.015em; margin: 0; color: #333b22;">Nyhetsflöde</h2>
+      <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.04em;">ALLA INLÄGG →</a>
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <div style="height: 2px; background: #333b22; margin-top: 18px;"></div>
+
+      <a href="#" style="display: grid; grid-template-columns: 132px 168px 1fr 28px; gap: 28px; align-items: center; padding: 22px 0; color: inherit; border-bottom: 1px solid #d9e0cd;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #6b7358;">2026-05-03</span>
+        <img src="nyhet-festival.jpg" alt="Montern på Kungsbacka Outdoor festival" style="width: 168px; height: 104px; object-fit: cover; border-radius: 3px;">
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+          <h3 style="font-weight: 700; font-size: 21px; line-height: 1.25; margin: 0; color: #333b22;">Välbesökt på Kungsbacka Outdoor festival</h3>
+          <p style="margin: 0; color: #545c46; font-size: 16px;">Även i år blev det succé. Trots en bitande vind på förmiddagen kom det mängder med friluftsintresserade människor.</p>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#59663b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+
+      <a href="#" style="display: grid; grid-template-columns: 132px 168px 1fr 28px; gap: 28px; align-items: center; padding: 22px 0; color: inherit; border-bottom: 1px solid #d9e0cd;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #6b7358;">2026-05-03</span>
+        <img src="nyhet-arsmote.jpg" alt="Naturreservatet på Tjolöholm" style="width: 168px; height: 104px; object-fit: cover; border-radius: 3px;">
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+          <h3 style="font-weight: 700; font-size: 21px; line-height: 1.25; margin: 0; color: #333b22;">Årsmöte + föreläsning om nya naturreservatet på Tjolöholm</h3>
+          <p style="margin: 0; color: #545c46; font-size: 16px;">Hos Helena och Björn Karlsson, Sjögärdevägen 81 (439 63 Frillesås) den 4 maj klockan 18.</p>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#59663b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+
+      <a href="#" style="display: grid; grid-template-columns: 132px 168px 1fr 28px; gap: 28px; align-items: center; padding: 22px 0; color: inherit; border-bottom: 1px solid #d9e0cd;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #6b7358;">2025-11-29</span>
+        <img src="nyhet-handbok.jpg" alt="Arbete längs Löftaleden" style="width: 168px; height: 104px; object-fit: cover; border-radius: 3px;">
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+          <h3 style="font-weight: 700; font-size: 21px; line-height: 1.25; margin: 0; color: #333b22;">Så byggde vi Löftaleden – och varför vi skrev en handbok om det</h3>
+          <p style="margin: 0; color: #545c46; font-size: 16px;">När vi började drömma om en sammanhängande gång- och cykelväg genom dalgången hade vi ingen aning om hur mycket arbete det skulle bli.</p>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#59663b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- OM OSS med faktaruta -->
+  <div style="padding: 0 56px 76px;">
+    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <h2 style="font-weight: 800; font-size: 34px; letter-spacing: -0.015em; margin: 0; color: #333b22;">Om oss</h2>
+        <p style="margin: 0; color: #414937;">Löftaleden Ideell Förening bildades våren 2021 som ett initiativ för att tillgängliggöra områdena kring Frillesås. Vi arbetar för att öka möjligheterna till en aktiv livsstil och att färdas på ett hållbart och tryggt sätt för så väl ung som gammal.</p>
+        <p style="margin: 0; color: #414937;">Ett av våra fokusområden handlar om att anlägga en sammanhängande lågtrafikerad gång- och cykelled genom Löftaåns dalgång som också binder ihop dalen med både Kattegattleden och Hallandsleden så väl som omgivande utflyktsmål i närområdet.</p>
+        <p style="margin: 0; color: #414937; font-weight: 700;">Välkommen att engagera dig i föreningen!</p>
+        <a href="#" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; margin-top: 4px;">LÄS MER OM OSS →</a>
+      </div>
+
+      <div style="border: 2px solid #333b22; border-radius: 4px; padding: 30px 32px; display: flex; flex-direction: column; gap: 0;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #d2601a; margin-bottom: 18px;">FAKTA</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 11px 0; border-bottom: 1px solid #d9e0cd;">
+          <span style="color: #545c46; font-size: 16px;">Föreningen bildad</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; color: #333b22;">2021</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 11px 0; border-bottom: 1px solid #d9e0cd;">
+          <span style="color: #545c46; font-size: 16px;">Sammanhängande sträcka</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; color: #333b22;">22 km</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 11px 0; border-bottom: 1px solid #d9e0cd;">
+          <span style="color: #545c46; font-size: 16px;">Ny grusväg som anlagts</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; color: #333b22;">3 km</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 11px 0; border-bottom: 1px solid #d9e0cd;">
+          <span style="color: #545c46; font-size: 16px;">Informationspunkter</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; color: #333b22;">12 st</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 11px 0;">
+          <span style="color: #545c46; font-size: 16px;">Medlemsavgift</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 17px; color: #333b22;">200 kr/år</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KONTAKT -->
+  <div style="background: #eff2e7; padding: 64px 56px;">
+    <h2 style="font-weight: 800; font-size: 34px; letter-spacing: -0.015em; margin: 0 0 30px; color: #333b22;">Kontakt</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 48px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #d2601a;">ADRESS</span>
+        <span style="color: #414937; font-size: 16px; line-height: 1.6;">Slättaråsbacken 21<br>439 63 Frillesås<br>Sverige</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #d2601a;">E-POST</span>
+        <a href="#" style="font-size: 16px;">loftaleden@gmail.com</a>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #d2601a; margin-top: 14px;">SOCIALT</span>
+        <a href="#" style="font-size: 16px;">Facebook-grupp</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #d2601a;">TELEFON</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 32px; margin-top: 2px;">
+          <span style="color: #414937; font-size: 16px;">Magnus Falk <span style="color: #838a70;">(ordf.)</span><br><a href="#">070-546 16 01</a></span>
+          <span style="color: #414937; font-size: 16px;">Lina Borghardt <span style="color: #838a70;">(kassör)</span><br><a href="#">076-024 43 60</a></span>
+          <span style="color: #414937; font-size: 16px;">Helena Karlsson<br><a href="#">073-991 74 97</a></span>
+          <span style="color: #414937; font-size: 16px;">Birger Löfgren<br><a href="#">079-355 05 80</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MED STÖD FRÅN + FOOTER -->
+  <div style="padding: 44px 56px; display: flex; align-items: center; gap: 48px; border-bottom: 1px solid #e3e8d8;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6b7358; white-space: nowrap;">MED STÖD FRÅN</span>
+    <div style="display: flex; align-items: center; gap: 48px;">
+      <img src="logo-lluh.png" alt="Lokalt Ledd Utveckling Halland" style="height: 56px; width: auto; object-fit: contain;">
+      <img src="logo-leader.jpg" alt="Leader" style="height: 50px; width: auto; object-fit: contain;">
+      <img src="logo-eu.jpg" alt="Europeiska jordbruksfonden för landsbygdsutveckling" style="height: 52px; width: auto; object-fit: contain;">
+    </div>
+  </div>
+
+  <div style="padding: 32px 56px 40px; display: flex; justify-content: space-between; align-items: center; gap: 32px;">
+    <span style="color: #8e957e; font-size: 14px;">© 2026 Löftaleden Ideell Förening · Slättaråsbacken 21, 439 63 Frillesås</span>
+    <div style="display: flex; gap: 28px;">
+      <a href="#" style="font-size: 14px;">Facebook-grupp</a>
+      <a href="#" style="font-size: 14px;">RSS-flöde</a>
+      <a href="#" style="font-size: 14px;">Bli medlem</a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":2760}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
